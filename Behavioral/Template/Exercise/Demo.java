@@ -20,8 +20,9 @@ abstract class CardGame
     }
 
     // returns -1 if no clear winner (both alive or both dead)
-    public int combat(int creature1, int creature2)
+    public final int combat(int creature1, int creature2)
     {
+        // prevent override thanks to "final"
         Creature first = creatures[creature1];
         Creature second = creatures[creature2];
         hit(first, second);
